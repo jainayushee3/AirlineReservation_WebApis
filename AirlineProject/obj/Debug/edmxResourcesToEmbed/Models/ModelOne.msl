@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbAirlineProjectModelStoreContainer" CdmEntityContainer="dbAirlineProjectEntities">
+    <EntitySetMapping Name="tblFlight_Details">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblFlight_Details">
+        <MappingFragment StoreEntitySet="tblFlight_Details">
+          <ScalarProperty Name="Flight_ID" ColumnName="Flight_ID" />
+          <ScalarProperty Name="FC_Capacity" ColumnName="FC_Capacity" />
+          <ScalarProperty Name="BC_Capacity" ColumnName="BC_Capacity" />
+          <ScalarProperty Name="EC_Capacity" ColumnName="EC_Capacity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFlight_Schedule">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblFlight_Schedule">
+        <MappingFragment StoreEntitySet="tblFlight_Schedule">
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+          <ScalarProperty Name="Flight_ID" ColumnName="Flight_ID" />
+          <ScalarProperty Name="Source_Loc" ColumnName="Source_Loc" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Dep_Time" ColumnName="Dep_Time" />
+          <ScalarProperty Name="Arr_Time" ColumnName="Arr_Time" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Dep_Date" ColumnName="Dep_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPassenger_Details">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblPassenger_Details">
+        <MappingFragment StoreEntitySet="tblPassenger_Details">
+          <ScalarProperty Name="Passenger_ID" ColumnName="Passenger_ID" />
+          <ScalarProperty Name="Receipt_ID" ColumnName="Receipt_ID" />
+          <ScalarProperty Name="Passenger_Name" ColumnName="Passenger_Name" />
+          <ScalarProperty Name="Passenger_Age" ColumnName="Passenger_Age" />
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSeat_Details">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblSeat_Details">
+        <MappingFragment StoreEntitySet="tblSeat_Details">
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+          <ScalarProperty Name="Seat_No" ColumnName="Seat_No" />
+          <ScalarProperty Name="Seat_Class" ColumnName="Seat_Class" />
+          <ScalarProperty Name="Seat_Status" ColumnName="Seat_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTicket_Details">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblTicket_Details">
+        <MappingFragment StoreEntitySet="tblTicket_Details">
+          <ScalarProperty Name="Receipt_ID" ColumnName="Receipt_ID" />
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Trip_type" ColumnName="Trip_type" />
+          <ScalarProperty Name="Other_Receipt_ID" ColumnName="Other_Receipt_ID" />
+          <ScalarProperty Name="Number_Of_Tickets" ColumnName="Number_Of_Tickets" />
+          <ScalarProperty Name="Tickets_Status" ColumnName="Tickets_Status" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="proc_GetDestinationLocations" FunctionName="dbAirlineProjectModel.Store.proc_GetDestinationLocations" />
+    <FunctionImportMapping FunctionImportName="proc_GetSourceLocations" FunctionName="dbAirlineProjectModel.Store.proc_GetSourceLocations" />
+    <EntitySetMapping Name="tblFlight_Schedule_Details">
+      <EntityTypeMapping TypeName="dbAirlineProjectModel.tblFlight_Schedule_Details">
+        <MappingFragment StoreEntitySet="tblFlight_Schedule_Details">
+          <ScalarProperty Name="Price_EC" ColumnName="Price_EC" />
+          <ScalarProperty Name="Price_BC" ColumnName="Price_BC" />
+          <ScalarProperty Name="Price_FC" ColumnName="Price_FC" />
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="proc_getSchedule" FunctionName="dbAirlineProjectModel.Store.proc_getSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbAirlineProjectModel.proc_getSchedule_Result">
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+          <ScalarProperty Name="Flight_ID" ColumnName="Flight_ID" />
+          <ScalarProperty Name="Source_Loc" ColumnName="Source_Loc" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Dep_Time" ColumnName="Dep_Time" />
+          <ScalarProperty Name="Arr_Time" ColumnName="Arr_Time" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Dep_Date" ColumnName="Dep_Date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_ReturnPrice" FunctionName="dbAirlineProjectModel.Store.proc_ReturnPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbAirlineProjectModel.proc_ReturnPrice_Result">
+          <ScalarProperty Name="Schedule_ID" ColumnName="Schedule_ID" />
+          <ScalarProperty Name="Price_FC" ColumnName="Price_FC" />
+          <ScalarProperty Name="Price_BC" ColumnName="Price_BC" />
+          <ScalarProperty Name="Price_EC" ColumnName="Price_EC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_getPrice" FunctionName="dbAirlineProjectModel.Store.proc_getPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbAirlineProjectModel.proc_getPrice_Result">
+          <ScalarProperty Name="Price_FC" ColumnName="Price_FC" />
+          <ScalarProperty Name="Price_BC" ColumnName="Price_BC" />
+          <ScalarProperty Name="Price_EC" ColumnName="Price_EC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f9333163b264581b2af99df0d797b90" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblFlight_Details" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblFlight_Schedule" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblSeat_Details" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblTicket_Details" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblUser" Width="1.5" PointX="1" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblFlight__Fligh__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblSeat_D__Sched__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblTicket__Sched__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblTicket__User___30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbAirlineProjectModel.tblPassenger_Details" Width="1.5" PointX="7.875" PointY="9.875" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblPassen__Seat___6754599E" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblPassen__User___66603565" />
+        <AssociationConnector Association="dbAirlineProjectModel.FK__tblSeat_D__Recei__6E01572D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
